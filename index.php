@@ -82,7 +82,7 @@ function getTopPlayers(){
   return $players;
 }
 
-echo "start: " . date() . "<br>";
+echo "start: " . date("Y/m/d g:i") . "<br>";
 
 // start
 $topPlayers = getTopPlayers();
@@ -108,4 +108,4 @@ foreach($topPlayers as $player){
 
 file_put_contents("test.json", json_encode($outputObj));
 
-echo "end: " . date();
+echo "end: " . date("Y/m/d g:i");
